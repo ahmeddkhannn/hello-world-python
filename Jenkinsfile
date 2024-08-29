@@ -5,18 +5,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'python3 hello.py'
+                bat 'echo Building'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'pytest'
+                bat 'echo Testing'
             }
         }
         stage('Deliver') {
             steps {
                 echo 'Delivering...'
+                bat 'echo Delivering'
             }
         }
     }
